@@ -18,7 +18,7 @@ const Card = ({ img, name, location, followers, following, repo, notFound }) => 
         <>
             <div className="row justify-content-center">
                 <div className="col-lg-5 col-md-9">
-                    <div className="card text-center p-sm-5 pt-5 pb-5 ps-2 pe-2 rounded-3 shadow-lg">
+                    <div id="card" className="card text-center p-sm-5 pt-5 pb-5 ps-2 pe-2 rounded-3 shadow-lg">
 
                         <img src={img} alt="avatar" className="userImg img-fluid mx-auto d-block mb-4" />
 

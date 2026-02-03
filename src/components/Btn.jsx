@@ -1,9 +1,20 @@
-import React from 'react'
+import domtoimage from "dom-to-image";
 
 const Btn = ({ title, url }) => {
-  if(title === "Download Card") {
+
+  const download = () => {
+    domtoimage.toPng(document.getElementById("card"))
+      .then((dataUrl) => {
+        const a = document.createElement("a");
+        a.href = dataUrl;
+        a.download = "card.png";
+        a.click();
+      });
+  };
+
+  if (title === "Download Card") {
     return (
-      <a className={`btn btn-darks`} >
+      <a onClick={download} className={`btn btn-darks`} >
         {title}
       </a>
     );
